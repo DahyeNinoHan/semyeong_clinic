@@ -35,12 +35,10 @@ const translations = {
     // Services Section
     servicesTitle: '진료 과목',
     servicesSubtitle: '전통 한의학의 다양한 치료법으로 건강을 회복하세요',
-    acupuncture: '침 치료',
+    acupuncture: '침구 치료',
     acupunctureDesc: '경혈점을 자극하여 기혈 순환을 개선하고 통증을 완화합니다',
     herbalPrescriptions: '한약 처방',
     herbalPrescriptionsDesc: '개인 체질에 맞는 맞춤형 한약으로 근본 치료를 진행합니다',
-    cuppingTherapy: '부항 치료',
-    cuppingTherapyDesc: '음압을 이용하여 혈액 순환을 촉진하고 독소를 제거합니다',
     healthCounseling: '건강 상담',
     healthCounselingDesc: '생활습관 개선과 예방 중심의 건강 관리 방법을 안내합니다',
     
@@ -93,12 +91,10 @@ const translations = {
     // Services Section
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Restore your health with various traditional Korean medicine treatments',
-    acupuncture: 'Acupuncture',
-    acupunctureDesc: 'Stimulate acupoints to improve qi and blood circulation and relieve pain',
+    acupuncture: 'Acupuncture & Moxibustion',
+    acupunctureDesc: 'Stimulate acupoints and use moxibustion to improve qi and blood circulation and relieve pain',
     herbalPrescriptions: 'Herbal Prescriptions',
     herbalPrescriptionsDesc: 'Customized herbal medicine tailored to individual constitution for fundamental treatment',
-    cuppingTherapy: 'Cupping Therapy',
-    cuppingTherapyDesc: 'Use negative pressure to promote blood circulation and remove toxins',
     healthCounseling: 'Health Counseling',
     healthCounselingDesc: 'Guidance on lifestyle improvements and prevention-centered health management',
     

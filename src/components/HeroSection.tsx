@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -20,7 +19,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 ${
+          <h1 className={`whitespace-nowrap text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 ${
             language === 'ko' ? 'korean-text' : ''
           }`}>
             {t('heroTitle')}

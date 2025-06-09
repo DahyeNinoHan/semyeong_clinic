@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -45,12 +44,19 @@ const ServicesSection = () => {
           }`}>
             {t('servicesSubtitle')}
           </p>
+          {/* Comma-separated specialties */}
+          <div className="text-lg text-foreground max-w-2xl mx-auto mt-6 mb-0 text-center">
+            한방 내과, 부인과, 소아과, 안과, 이비인후과, 신경정신과, 물리치료과
+          </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.filter(s => s.key !== 'cuppingTherapy').map((service, index) => {
+            // Change 'acupuncture' to '침구 치료' in Korean
             const Icon = service.icon;
+            let title = t(service.key);
+            if (service.key === 'acupuncture' && language === 'ko') title = '침구 치료';
             return (
               <Card
                 key={service.key}
@@ -64,14 +70,16 @@ const ServicesSection = () => {
                   <CardTitle className={`text-xl font-semibold text-foreground group-hover:text-clinic-forest transition-colors ${
                     language === 'ko' ? 'korean-text' : ''
                   }`}>
-                    {t(service.key)}
+                    {title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className={`text-muted-foreground leading-relaxed ${
                     language === 'ko' ? 'korean-text' : ''
                   }`}>
-                    {t(`${service.key}Desc`)}
+                    {service.key === 'acupuncture' && language === 'ko'
+                      ? '경혈점을 자극하여 기혈 순환을 개선하고 통증을 완화합니다'
+                      : t(`${service.key}Desc`)}
                   </p>
                 </CardContent>
               </Card>
